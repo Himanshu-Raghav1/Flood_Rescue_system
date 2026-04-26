@@ -4,6 +4,12 @@ import cv2
 import numpy as np
 from PIL import Image
 import tempfile
+import os
+os.environ['OPENCV_VIDEOIO_DEBUG'] = '0'
+os.environ['OPENCV_LOG_LEVEL'] = 'OFF'
+
+import cv2
+cv2.ocl.setUseOpenCL(False)  # Disable GPU acceleration
 
 # Load model efficiently and cache it so it doesn't reload on every UI interaction
 @st.cache_resource
