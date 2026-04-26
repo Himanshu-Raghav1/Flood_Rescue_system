@@ -1,0 +1,28 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+
+# Streamlit config (optional)
+.streamlit/
+
+# Temporary files or outputs
+*.mp4
+*.avi
+*.mov
+temp_video_*.mp4
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Do not include large datasets or test images/videos by default if you don't want to
+# /data
+# /test_media
