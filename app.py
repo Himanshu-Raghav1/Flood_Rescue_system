@@ -1,12 +1,16 @@
-import streamlit as st
-from ultralytics import YOLO
-import cv2
-import numpy as np
-from PIL import Image
-import tempfile
 import os
 os.environ['OPENCV_VIDEOIO_DEBUG'] = '0'
 os.environ['OPENCV_LOG_LEVEL'] = 'OFF'
+os.environ['YOLO_CONFIG_DIR'] = '/tmp/Ultralytics'
+os.environ['QT_QPA_PLATFORM'] = 'offscreen'
+
+import streamlit as st
+from ultralytics import YOLO
+import cv2
+cv2.ocl.setUseOpenCL(False)
+import numpy as np
+from PIL import Image
+import tempfile
 
 import cv2
 cv2.ocl.setUseOpenCL(False)  # Disable GPU acceleration
